@@ -1,2 +1,2 @@
-# juno-college-react-2021
-Juno React 2021 course project
+# Juno College - React 2021 course project
+My react project for the Juno College React 2021 course
