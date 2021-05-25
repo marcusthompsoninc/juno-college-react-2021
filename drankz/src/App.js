@@ -23,9 +23,8 @@ function App() {
         </div>
       </div>
 
-      <div className="row">
-        <Results url={URL_POPULAR_COCKTAILS} />
-      </div>
+      <Results url={URL_POPULAR_COCKTAILS} />
+
     </div>
   </div>
   );
