@@ -1,0 +1,18 @@
+.site-title { 
+
+    padding: $padding-gap*2 0;
+
+
+    
+    img,svg {
+        margin-top:-0.5rem;
+        padding-right:$padding-gap/4;
+        width:48px;
+        height:48px;
+
+        path {
+            fill:$accent-color;
+        }
+    }
+
+}

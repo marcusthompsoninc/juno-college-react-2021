@@ -1,29 +1,25 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import Logo from './assets/cheers.svg';
+import './App.scss';
+import Header from './components/Header';
+import Form from './components/Form';
+
+//console.log(process.env.REACT_APP_COCKTAIL_API_KEY)
+//console.log(process.env.REACT_APP_URL_10_RANDOM_COCKTAILS)
 
 function App() {
   return (
-    <div id="cheers">
-      
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <h1 className="align-middle text-center"> <img src={Logo} width="36" height="36" alt="Cheers" />
-               Cheers</h1>
-          </div>
+  <div id="cheers">
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <Header />
         </div>
-        <div className="row">
-          <div className="col">
-            Column
-          </div>
-          <div className="col">
-            Column
-          </div>
-          <div className="col">
-            Column
-          </div>
+      </div>
+      <div className="row justify-content-center">
+        <div className="col-10 col-md-8 col-lg-6">
+          <Form />
         </div>
+      </div>
     </div>
   </div>
   );

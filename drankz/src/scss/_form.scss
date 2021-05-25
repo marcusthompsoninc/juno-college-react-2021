@@ -1,0 +1,45 @@
+#search-form {
+
+    
+
+    .search-input {
+        text-transform: capitalize;
+        border-color:$accent-color;
+        border-width:2px;
+    }
+    
+    .search-input:focus {
+        border-color:$accent-color;
+        box-shadow: 0 0 0 .25rem rgba(255,192,203,.25);
+
+        & + .btn-search {
+            box-shadow: 0 0 0 .25rem rgba(255,192,203,.25) !important;
+        }
+    }
+
+    .search-input:placeholder-shown {
+        text-transform: none;
+    }
+
+
+    .btn-search {
+        background-color: $accent-color;
+        color: $primary-color;
+        font-weight:700;
+        text-transform: uppercase;
+        border:2px solid $accent-color;
+
+        &:focus {
+            border-color:$accent-color;
+            box-shadow: 0 0 0 .25rem rgba(255,192,203,.25) !important;
+            background-color: $hover-color
+        }
+
+        &:hover {
+            background-color: $hover-color
+        }
+    }
+
+
+}
+
