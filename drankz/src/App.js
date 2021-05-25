@@ -2,11 +2,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import Header from './components/Header';
 import Form from './components/Form';
+import Results from './components/Results';
 
-//console.log(process.env.REACT_APP_COCKTAIL_API_KEY)
-//console.log(process.env.REACT_APP_URL_10_RANDOM_COCKTAILS)
 
 function App() {
+
+  const URL_POPULAR_COCKTAILS = process.env.REACT_APP_URL_POPULAR_COCKTAILS;
+
   return (
   <div id="cheers">
     <div className="container">
@@ -19,6 +21,10 @@ function App() {
         <div className="col-10 col-md-8 col-lg-6">
           <Form />
         </div>
+      </div>
+
+      <div className="row">
+        <Results url={URL_POPULAR_COCKTAILS} />
       </div>
     </div>
   </div>
