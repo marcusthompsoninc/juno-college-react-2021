@@ -1,5 +1,5 @@
 #cheers {
-    padding:3rem 0;
+    padding:3rem 0 0 0;
     color:$primary-color;
 
     p {
@@ -16,5 +16,9 @@
     
         }
     }   
+
+    ::selection {
+        background-color:$accent-color;
+    }
 
 }

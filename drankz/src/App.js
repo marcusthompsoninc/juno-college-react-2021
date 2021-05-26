@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
@@ -101,10 +102,13 @@ function App() {
           </Route>
         </Switch>
       
-
+        
     </div>
     </Router>
     </UrlContext.Provider>
+
+   
+    <Footer />
   </div>
   );
 }
