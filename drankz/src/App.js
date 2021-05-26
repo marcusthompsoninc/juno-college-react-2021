@@ -25,7 +25,7 @@ function App() {
   const [popularDrinks, setPopularDrinks] = useState(null);
   const [ingredients, setIngredients] = useState(null);
   const [searchURL, setSearchURL] = useState(URL_POPULAR_COCKTAILS);
-  // eslint-disable-next-line 
+  // eslint-disable-next-line
   const [baseSearchURL, setBaseSearchURL] = useState(URL_SEARCH);
 
   function updateUrl(url) {
@@ -45,7 +45,7 @@ function App() {
       }
     }
     fetchIngredients();
-  });
+  }, [URL_ALL_INGREDIENTS]);
 
   useEffect(() => {
   
@@ -59,13 +59,13 @@ function App() {
       }
     }
     fetchAllDrinks();
-  })
+  }, [URL_ALL_DRINKS])
 
   useEffect(() => {
   
     async function fetchPopularDrinks() {
       try {
-        const response = await fetch(URL_ALL_DRINKS);
+        const response = await fetch(URL_POPULAR_COCKTAILS);
         const apiData = await response.json();
         setPopularDrinks(apiData);
       } catch(error) {
@@ -73,7 +73,7 @@ function App() {
       }
     }
     fetchPopularDrinks();
-  })
+  }, [URL_POPULAR_COCKTAILS])
 
   console.log("🍹 All drinks", allDrinks);
   console.log("📈 Popular drinks", popularDrinks);
