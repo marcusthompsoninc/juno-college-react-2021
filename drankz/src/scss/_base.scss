@@ -1,4 +1,18 @@
 #cheers {
     padding:3rem 0;
     color:$primary-color;
+
+    a { 
+        color: $color-pink-dark;
+        text-decoration: none;
+        border-bottom: 2px solid $accent-color;
+        
+        &:hover {
+            background-color:$accent-color;
+            color:$primary-color;
+            border-bottom-color: $hover-color;
+        }
+    
+    }
+
 }

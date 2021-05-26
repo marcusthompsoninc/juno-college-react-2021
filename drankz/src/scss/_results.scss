@@ -8,4 +8,13 @@
     }
 
     h3 { font-size:1rem;}
+
+    .card {
+        border: 1px solid $accent-color;
+        box-shadow: 0 0 0 .25rem rgba(255,192,203,0);
+
+        &:hover {
+            box-shadow: 0 0 0 .25rem rgba(255,192,203,.25)
+        }
+    }
 }
