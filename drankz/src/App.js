@@ -82,6 +82,7 @@ function App() {
   return (
   <div id="cheers">
     <UrlContext.Provider value={{baseSearchURL, updateUrl}}>
+    <Router>
     <div className="container">
       <div className="row">
         <div className="col">
@@ -89,19 +90,20 @@ function App() {
         </div>
       </div>
 
-      <Router>
+      
       <Switch>
           <Route path="/about">
             <About />
           </Route>
           <Route path="/drink/:id" children={<Drink />} />
-          <Route path="/">
+          <Route exact path="/">
             <Home url={searchURL} />
           </Route>
         </Switch>
-      </Router>
+      
 
     </div>
+    </Router>
     </UrlContext.Provider>
   </div>
   );
