@@ -1,12 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 import Header from './components/Header';
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import UrlContext from './context/UrlContext'
 
@@ -26,6 +25,7 @@ function App() {
   const [popularDrinks, setPopularDrinks] = useState(null);
   const [ingredients, setIngredients] = useState(null);
   const [searchURL, setSearchURL] = useState(URL_POPULAR_COCKTAILS);
+  // eslint-disable-next-line 
   const [baseSearchURL, setBaseSearchURL] = useState(URL_SEARCH);
 
   function updateUrl(url) {
@@ -45,7 +45,7 @@ function App() {
       }
     }
     fetchIngredients();
-  }, []);
+  });
 
   useEffect(() => {
   
@@ -59,7 +59,7 @@ function App() {
       }
     }
     fetchAllDrinks();
-  }, [])
+  })
 
   useEffect(() => {
   
@@ -73,7 +73,7 @@ function App() {
       }
     }
     fetchPopularDrinks();
-  }, [])
+  })
 
   console.log("🍹 All drinks", allDrinks);
   console.log("📈 Popular drinks", popularDrinks);
