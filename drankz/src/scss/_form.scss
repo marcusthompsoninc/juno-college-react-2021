@@ -35,7 +35,8 @@
         }
 
         &:hover {
-            background-color: $hover-color
+            background-color: $hover-color;
+            color:$accent-color
         }
     }
 

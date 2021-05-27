@@ -91,7 +91,7 @@ function App() {
         </div>
       </div>
 
-      
+      <div className="page-content">
       <Switch>
           <Route path="/about">
             <About />
@@ -101,6 +101,7 @@ function App() {
             <Home url={searchURL} />
           </Route>
         </Switch>
+        </div>
       
         
     </div>
