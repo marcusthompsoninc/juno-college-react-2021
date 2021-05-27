@@ -104,11 +104,12 @@ function App() {
       
         
     </div>
+    <Footer />
     </Router>
     </UrlContext.Provider>
 
    
-    <Footer />
+    
   </div>
   );
 }

@@ -1,9 +1,11 @@
 import { useState, useContext } from 'react';
 import UrlContext from '../context/UrlContext';
+import TitleContext from '../context/TitleContext';
 
-function Form(props) {
+function Form() {
 
-    const { baseSearchURL, updateUrl } = useContext(UrlContext)
+    const { baseSearchURL, updateUrl } = useContext(UrlContext);
+    const { title, updateTitle } = useContext(TitleContext)
 
     const [searchIngredient, setSearchIngredient] = useState('');
 
@@ -11,6 +13,10 @@ function Form(props) {
         event.preventDefault();
         
        console.log("🍸 Ingredient searched:",  searchIngredient);
+       
+       updateTitle(searchIngredient);
+
+       console.log("📛 Search title", title);
 
        const url = new URL(baseSearchURL);
 
@@ -26,17 +32,19 @@ function Form(props) {
     } 
 
     return (
+        
         <div className="row justify-content-center c-form">
-            <div className="col-10 col-md-8 col-lg-6">
+            <div className="col-12 col-md-8 col-lg-7">
                 <form id="search-form">
-                    <label htmlFor="search-input" className="visually-hidden">Search for a cocktail by ingredient name</label>
+                    <label htmlFor="search-input" className="visually-hidden">Search for a drink by ingredient name</label>
                 <div className="input-group mb-3">
-                    <input type="text" className="form-control form-control-lg search-input" id="search-input" placeholder="Search for a cocktail by ingredient name" value={searchIngredient} onChange={(event) => setSearchIngredient(event.target.value)} />
+                    <input type="text" className="form-control form-control-lg search-input" id="search-input" placeholder="Search for a drink by ingredient name" value={searchIngredient} onChange={(event) => setSearchIngredient(event.target.value)} />
                     <button className="btn btn-outline-secondary btn-search" type="button" id="button-addon2" onClick={handleSubmit}>Pour it up!</button>
                 </div>
                 </form>
             </div>
         </div>
+        
     )
 }
 

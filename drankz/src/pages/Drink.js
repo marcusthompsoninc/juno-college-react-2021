@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
+import BackItUp from '../components/BackItUp';
 import Breadcrumb from '../components/Breadcrumb';
 import Loading from '../components/Loading'
 import { ingredientCount } from '../utils/utils';
@@ -69,6 +70,7 @@ function Drink() {
                 
                 <h3>Instructions</h3>
                 <p className="drink-instructions">{drink.strInstructions}</p>
+                <BackItUp text="Back to the drinks!" />
                 </div>
             </div>
         </div>

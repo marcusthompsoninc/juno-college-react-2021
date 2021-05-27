@@ -5,4 +5,13 @@ footer {
     font-size:0.8rem;
     width:100%;
     box-shadow: 0 0 0 .25rem rgba(255,192,203,.25);
+
+    a {
+        border-bottom: 2px solid $accent-color;
+        color:$primary-color;
+
+        &:hover {
+            color:$hover-color;
+        }
+    }
 }

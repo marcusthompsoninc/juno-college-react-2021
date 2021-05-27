@@ -1,6 +1,13 @@
 .c-breadcrumbs {
     font-style: oblique;
 
+    @media screen and (max-width:768px) {
+        ol {
+            justify-content: center;
+        }
+    }
+    
+
     a {
         color: $color-pink-dark;
         text-decoration: none;

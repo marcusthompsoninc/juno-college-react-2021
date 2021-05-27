@@ -4,7 +4,8 @@ import NoResults from './NoResults';
 import { ingredientCount } from '../utils/utils';
 import Loading from '../components/Loading';
 
-function Results( { url } ) {
+function Results( { url, title } ) {
+
 
     const res = useFetch(url, {});
     if (!res.response) {
@@ -50,7 +51,7 @@ function Results( { url } ) {
         return (
             <div className="c-results" >
                 <div className="row">
-                    <h3>Popular Drinks</h3>
+                    <h3 className="results-title">{title.length > 0 ? `Drinks containing '${title}'` : "Popular Drinks"}</h3>
                 </div>
                 <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">      
                     {listResults}

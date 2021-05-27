@@ -1,9 +1,13 @@
-#cheers {
-    padding:3rem 0 0 0;
-    color:$primary-color;
+.c-page {
+    padding-bottom:5rem;
+    &.c-page--about {
+        ul {
+            margin-left:0;
+            padding-left:1rem;
+        }
+    }
 
-    p {
-        a { 
+    a { 
         color: $color-pink-dark;
         text-decoration: none;
         border-bottom: 2px solid $accent-color;
@@ -15,19 +19,4 @@
             }
     
         }
-    }   
-
-    ::selection {
-        background-color:$accent-color;
-    }
-
-    ::marker {
-        color:$accent-color
-    }
-
-    @media screen and (max-width:768px) {
-        padding:1.5rem 0 0 0;
-    }
-    
-
 }

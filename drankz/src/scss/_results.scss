@@ -9,6 +9,10 @@
 
     a{ text-decoration:none !important }
 
+    .results-title {
+        padding-bottom:$padding-gap;
+    }
+
     .card {
         border: 1px solid $accent-color;
         box-shadow: 0 0 0 .25rem rgba(255,192,203,0);
