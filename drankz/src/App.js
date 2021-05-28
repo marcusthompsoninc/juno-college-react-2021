@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route
 } from "react-router-dom";
@@ -83,7 +83,7 @@ function App() {
   return (
   <div id="cheers">
     <UrlContext.Provider value={{baseSearchURL, updateUrl}}>
-    <Router>
+    <HashRouter>
     <div className="container">
       <div className="row">
         <div className="col">
@@ -106,7 +106,7 @@ function App() {
         
     </div>
     <Footer />
-    </Router>
+    </HashRouter>
     </UrlContext.Provider>
 
    
